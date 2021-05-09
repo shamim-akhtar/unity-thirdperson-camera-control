@@ -171,9 +171,11 @@ MonoBehaviour:
   mCharacterController: {fileID: 0}
   mAnimator: {fileID: 1390632728}
   mWalkSpeed: 2
-  mRunSpeed: 4
+  mRunSpeed: 3
   mRotationSpeed: 50
   mGravity: -30
+  mFollowCameraForward: 1
+  mTurnRate: 200
 --- !u!143 &1152257205
 CharacterController:
   m_ObjectHideFlags: 0
@@ -270,6 +272,7 @@ GameObject:
   - component: {fileID: 1668258143}
   - component: {fileID: 1668258142}
   - component: {fileID: 1668258141}
+  - component: {fileID: 1668258144}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -342,6 +345,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668258144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668258140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab673b8f9cc45f4b9078d03d44c00ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mThirdPersonCameraType: 3
+  mPlayer: {fileID: 1152257203}
+  mPositionOffset: {x: 0, y: 2, z: -2.5}
+  mAngleOffset: {x: 0, y: 0, z: 0}
+  mDamping: 10
+  mMinPitch: -30
+  mMaxPitch: 30
+  mRotationSpeed: 5
 --- !u!1 &1855076740
 GameObject:
   m_ObjectHideFlags: 0
