@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1137836121
+--- !u!1 &1152257201
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,35 +131,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1137836122}
+  - component: {fileID: 1152257203}
+  - component: {fileID: 1152257204}
+  - component: {fileID: 1152257205}
   m_Layer: 0
-  m_Name: SciFi_Player
+  m_Name: SciFi_Player_CharacterController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1137836122
+--- !u!4 &1152257203
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137836121}
+  m_GameObject: {fileID: 1152257201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1395136569}
+  - {fileID: 1390632727}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1395136568
+--- !u!114 &1152257204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152257201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245415633610eaf428f77548bfcd9b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mCharacterController: {fileID: 0}
+  mAnimator: {fileID: 1390632728}
+  mWalkSpeed: 2
+  mRunSpeed: 4
+  mRotationSpeed: 50
+  mGravity: -30
+--- !u!143 &1152257205
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152257201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!1001 &1390632726
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1137836122}
+    m_TransformParent: {fileID: 1152257203}
     m_Modifications:
     - target: {fileID: 1684166029043832, guid: d78e78402a0147d418929eaae422999e, type: 3}
       propertyPath: m_Name
@@ -211,10 +249,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d78e78402a0147d418929eaae422999e, type: 3}
---- !u!4 &1395136569 stripped
+--- !u!4 &1390632727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4592669279566048, guid: d78e78402a0147d418929eaae422999e, type: 3}
-  m_PrefabInstance: {fileID: 1395136568}
+  m_PrefabInstance: {fileID: 1390632726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1390632728 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95152086404802036, guid: d78e78402a0147d418929eaae422999e, type: 3}
+  m_PrefabInstance: {fileID: 1390632726}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1668258140
 GameObject:
